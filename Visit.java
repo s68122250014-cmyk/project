@@ -1,5 +1,3 @@
-package project;
-
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -107,22 +105,53 @@ public class Visit {
     public void setnote(String note) {
         this.note = note;
     }
+
+    
     public void createVisit() {
+        try { 
         System.out.println("From class Visit = createVisit" );
-    } 
+    } catch (Exception e) {
+        System.out.println("Error in createVisit");
+    }
+}
+
     public void updateStatus() {
-        System.out.println("From class Visit = updateStatus" );
+        try {
+            System.out.println("From class Visit = updateStatus" );
+        } catch (Exception e) {
+            System.out.println("Error in updateStatus");
+        }
     }
+
     public void addDiagnosis() {
-        System.out.println("From class Visit = addDiagnosis" );
+        try {
+            System.out.println("From class Visit = addDiagnosis" );
+        } catch (Exception e) {
+            System.out.println("Error in addDiagnosis");
+        }
     }
+
     public void addTreatment() {
-        System.out.println("From class Visit = addTreatment" );
+        try {
+            System.out.println("From class Visit = addTreatment" );
+        } catch (Exception e) {
+            System.out.println("Error in addTreatment");
+        }
     }
+
     public void issueMedicalCertificate() {
-        System.out.println("From class Visit = issueMedicalCertificate" );
-    }    
+        try {
+            System.out.println("From class Visit = issueMedicalCertificate" );
+        } catch (Exception e) {
+            System.out.println("Error in issueMedicalCertificate");
+        }
+    }
+
     public void closeVisit() {
-        System.out.println("From class Visit = closeVisit" );
+        try {
+            System.out.println("From class Visit = closeVisit" );
+        } catch (Exception e) {
+            System.out.println("Error in closeVisit");
+        }
     }
 }

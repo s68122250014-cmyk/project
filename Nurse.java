@@ -1,5 +1,3 @@
-package project;
-
 public class Nurse {
     private String nurseId;
     private String licenseNumber;
@@ -26,7 +24,7 @@ public class Nurse {
     public void setnurseId(String nurseId) {
         this.nurseId = nurseId;
     }
-    public String getlicenseNumber() {
+    public String getlicenseNumber() { 
         return  licenseNumber;
     }
     public void setlicenseNumber(String licenseNumber) {
@@ -62,19 +60,42 @@ public class Nurse {
     public void setweight(double weight) {
         this.weight = weight;
     }
-    public void checkInitialSymptoms() {
-        System.out.println("From class Nurse = checkInitialSymptoms" );
+  public void checkInitialSymptoms() {
+    try {
+        System.out.println("From class Nurse = checkInitialSymptoms");
+    } catch (Exception e) {
+        System.out.println("Error in checkInitialSymptoms");
     }
-    public void checkVitalSigns() {
-        System.out.println("From class Nurse = checkVitalSigns" );
+}
+public void checkVitalSigns() {
+    try {
+        System.out.println("From class Nurse = checkVitalSigns");
+    } catch (Exception e) {
+        System.out.println("Error in checkVitalSigns");
     }
-    public void recordSymptoms() {
-        System.out.println("From class Nurse = recordSymptoms" );
+}
+
+public void recordSymptoms() {
+    try {
+        System.out.println("From class Nurse = recordSymptoms");
+    } catch (Exception e) {
+        System.out.println("Error in recordSymptoms");
     }
-    public void provideFirstAid() {
-        System.out.println("From class Nurse = provideFirstAid" );
+}
+
+public void provideFirstAid() {
+    try {
+        System.out.println("From class Nurse = provideFirstAid");
+    } catch (Exception e) {
+        System.out.println("Error in provideFirstAid");
     }
-    public void referToDoctor() {
-        System.out.println("From class Nurse = referToDoctor" );
-    }                    
+}
+
+public void referToDoctor() {
+    try {
+        System.out.println("From class Nurse = referToDoctor");
+    } catch (Exception e) {
+        System.out.println("Error in referToDoctor ");
+    }
+}
 }

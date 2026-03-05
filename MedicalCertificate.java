@@ -1,8 +1,7 @@
-package project;
-
 import java.util.Date;
 
 public class MedicalCertificate {
+
     private String certificateId;
     private Date issueDate;
     private Date expireDate;
@@ -16,8 +15,10 @@ public class MedicalCertificate {
         this.isValid = false;
     }
 
-    public MedicalCertificate(String certificateId, Date issueDate, Date expireDate,
-                              String diagnosisSummary, int restDays) {
+    public MedicalCertificate(String certificateId, Date issueDate,
+            Date expireDate, String diagnosisSummary,
+            int restDays) {
+
         this.certificateId = certificateId;
         this.issueDate = issueDate;
         this.expireDate = expireDate;
@@ -76,29 +77,57 @@ public class MedicalCertificate {
     }
 
     public void generateCertificate() {
-        this.issueDate = new Date();   
-        this.isValid = true;
-        this.isPrinted = false;
-        System.out.println("Medical Certificate generated successfully.");
+        try {
+            this.issueDate = new Date();
+            this.isValid = true;
+            this.isPrinted = false;
+            System.out.println("from class MedicalCertificate = generateCertificate");
+        } catch (Exception e) {
+            System.out.println("Error in generateCertificate");
+        }
     }
 
     public void printCertificate() {
-            System.out.println(" Medical Certificate ");
+        try {
+            System.out.println("from class MedicalCertificate = printCertificate");
             System.out.println("Certificate ID: " + certificateId);
-            System.out.println("Issue Date: " + issueDate);
-            System.out.println("Expire Date: " + expireDate);
             System.out.println("Diagnosis: " + diagnosisSummary);
             System.out.println("Rest Days: " + restDays);
-            System.out.println("Status: VALID");
-            this.isPrinted = true;
+        } catch (Exception e) {
+            System.out.println("Error in printCertificate");
+        }
     }
 
     public boolean verifyCertificate() {
+        try {
             return isValid;
+        } catch (Exception e) {
+            System.out.println("Error in verifyCertificate");
+            return false;
+        }
     }
 
     public void invalidateCertificate() {
-        this.isValid = false;
-        System.out.println("Medical Certificate has been invalidated.");
+        try {
+            this.isValid = false;
+            System.out.println("from class MedicalCertificate = invalidateCertificate");
+        } catch (Exception e) {
+            System.out.println("Error in invalidateCertificate");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        MedicalCertificate mc = new MedicalCertificate(
+                "MC001",
+                new Date(),
+                new Date(),
+                "Common Cold",
+                3);
+
+        mc.generateCertificate();
+        mc.printCertificate();
+        mc.verifyCertificate();
+        mc.invalidateCertificate();
     }
 }

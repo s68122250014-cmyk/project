@@ -1,5 +1,3 @@
-package project;
-
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -114,16 +112,35 @@ public class Student {
         public void setvisittime(LocalTime visittime) {
         this.visittime = visittime;
     }
-    public void registerVisit() {
-        System.out.println("From class Student = registerVisit" );
+   public void registerVisit() {
+    try {
+        System.out.println("From class Student = registerVisit");
+    } catch (Exception e) {
+        System.out.println("Error in registerVisit");
     }
-    public void updateHealthInfo() {
-        System.out.println("From class Student = updateHealthInfo" );
+}
+
+public void updateHealthInfo() {
+    try {
+        System.out.println("From class Student = updateHealthInfo");
+    } catch (Exception e) {
+        System.out.println("Error in updateHealthInfo");
     }
-    public void requestMedicalCertificate() {
-        System.out.println("From class Student = requestMedicalCertificate" );
+}
+
+public void requestMedicalCertificate() {
+    try {
+        System.out.println("From class Student = requestMedicalCertificate");
+    } catch (Exception e) {
+        System.out.println("Error in requestMedicalCertificate");
     }
-    public void viewVisitHistory() {
-        System.out.println("From class Student = viewVisitHistory" );
-    }              
+}
+
+public void viewVisitHistory() {
+    try {
+        System.out.println("From class Student = viewVisitHistory");
+    } catch (Exception e) {
+        System.out.println("Error in viewVisitHistory");
+    }
+}
 }

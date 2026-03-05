@@ -1,5 +1,3 @@
-package project;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -70,22 +68,38 @@ public class MedicalRecord {
     public void setRemark(String remark) { this.remark = remark; }
 
     public void saveRecord() {
-        System.out.println("Record saved: " + recordId);
+    try {
+        System.out.println("From class MedicalRecord = saveRecord");
+    } catch (Exception e) {
+        System.out.println("Error in saveRecord");
     }
+}
 
-    public void updateRecord() {
-        System.out.println("Record updated: " + recordId);
+public void updateRecord() {
+    try {
+        System.out.println("From class MedicalRecord = updateRecord");
+    } catch (Exception e) {
+        System.out.println("Error in updateRecord");
     }
+}
 
-    public void viewRecord() {
-        System.out.println("Viewing record: " + recordId);
+public void viewRecord() {
+    try {
+        System.out.println("From class MedicalRecord = viewRecord");
+    } catch (Exception e) {
+        System.out.println("Error in viewRecord");
     }
+}
 
-    public void printMedicalCertificate() {
+public void printMedicalCertificate() {
+    try {
         if (medicalCertificateIssued) {
             System.out.println("Printing medical certificate for " + recordId);
         } else {
             System.out.println("No certificate issued for " + recordId);
         }
+    } catch (Exception e) {
+        System.out.println("Error in printMedicalCertificate");
     }
+}
 }

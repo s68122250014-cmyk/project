@@ -1,5 +1,3 @@
-package project;
-
 public class Doctor {
 
     private String doctorId;
@@ -16,8 +14,10 @@ public class Doctor {
         doctorCount++;
     }
 
-    public Doctor(String doctorId, String licenseNumber, String specialty, String experienceYear,
-     String diagnosis, String treatmentPlan, String prescription) {
+    public Doctor(String doctorId, String licenseNumber, String specialty,
+            String experienceYear, String diagnosis,
+            String treatmentPlan, String prescription) {
+
         this.doctorId = doctorId;
         this.licenseNumber = licenseNumber;
         this.specialty = specialty;
@@ -28,45 +28,120 @@ public class Doctor {
         doctorCount++;
     }
 
+    public String getDoctorId() {
+        return doctorId;
+    }
 
-    public String getDoctorId() { return doctorId; }
-    public void setDoctorId(String doctorId) { this.doctorId = doctorId; }
+    public void setDoctorId(String doctorId) {
+        this.doctorId = doctorId;
+    }
 
-    public String getLicenseNumber() { return licenseNumber; }
-    public void setLicenseNumber(String licenseNumber) { this.licenseNumber = licenseNumber; }
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
 
-    public String getSpecialty() { return specialty; }
-    public void setSpecialty(String specialty) { this.specialty = specialty; }
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
 
-    public String getExperienceYear() { return experienceYear; }
-    public void setExperienceYear(String experienceYear) { this.experienceYear = experienceYear; }
+    public String getSpecialty() {
+        return specialty;
+    }
 
-    public String getDiagnosis() { return diagnosis; }
-    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
+    }
 
-    public String getTreatmentPlan() { return treatmentPlan; }
-    public void setTreatmentPlan(String treatmentPlan) { this.treatmentPlan = treatmentPlan; }
+    public String getExperienceYear() {
+        return experienceYear;
+    }
 
-    public String getPrescription() { return prescription; }
-    public void setPrescription(String prescription) { this.prescription = prescription; }
+    public void setExperienceYear(String experienceYear) {
+        this.experienceYear = experienceYear;
+    }
+
+    public String getDiagnosis() {
+        return diagnosis;
+    }
+
+    public void setDiagnosis(String diagnosis) {
+        this.diagnosis = diagnosis;
+    }
+
+    public String getTreatmentPlan() {
+        return treatmentPlan;
+    }
+
+    public void setTreatmentPlan(String treatmentPlan) {
+        this.treatmentPlan = treatmentPlan;
+    }
+
+    public String getPrescription() {
+        return prescription;
+    }
+
+    public void setPrescription(String prescription) {
+        this.prescription = prescription;
+    }
 
     public void examinePatient() {
-        System.out.println("Doctor examines patient.");
+        try {
+            System.out.println("from class Doctor = examinePatient");
+        } catch (Exception e) {
+            System.out.println("Error in examinePatient");
+        }
     }
 
     public void diagnose() {
-        System.out.println("Doctor makes a diagnosis.");
+        try {
+            System.out.println("from class Doctor = diagnose");
+        } catch (Exception e) {
+            System.out.println("Error in diagnose");
+        }
     }
 
     public void prescribeMedicine() {
-        System.out.println("Doctor prescribes medicine.");
+        try {
+            System.out.println("from class Doctor = prescribeMedicine");
+        } catch (Exception e) {
+            System.out.println("Error in prescribeMedicine");
+        }
     }
 
     public void issueMedicalCertificate() {
-        System.out.println("Doctor issues a medical certificate.");
+        try {
+            System.out.println("from class Doctor = issueMedicalCertificate");
+        } catch (Exception e) {
+            System.out.println("Error in issueMedicalCertificate");
+        }
     }
 
     public void approveLeave() {
-        System.out.println("Doctor approves leave.");
+        try {
+            System.out.println("from class Doctor = approveLeave");
+        } catch (Exception e) {
+            System.out.println("Error in approveLeave");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Doctor doc = new Doctor(
+                "D001",
+                "LIC12345",
+                "General Medicine",
+                "10",
+                "Flu",
+                "Rest",
+                "Paracetamol");
+
+        doc.examinePatient();
+        doc.diagnose();
+        doc.prescribeMedicine();
+        doc.issueMedicalCertificate();
+        doc.approveLeave();
+
+        System.out.println("Doctor ID: " + doc.getDoctorId());
+        System.out.println("Total Doctors: " + Doctor.doctorCount);
     }
 }

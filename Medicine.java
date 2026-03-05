@@ -1,5 +1,3 @@
-package project;
-
 import java.util.Date;
 
 public class Medicine {
@@ -80,16 +78,31 @@ public class Medicine {
         this.expireDate = expireDate;
     }
     public void dispense() {
+        try {
         System.out.println("From class Medicine = dispense" );
-    }
+        } catch (Exception e) {
+            System.out.println("Error in dispense");
+    }   }
     public void checkStock() {
-        System.out.println("From class Medicine = checkStock" );
+        try {
+            System.out.println("From class Medicine = checkStock" );
+        } catch (Exception e) {
+            System.out.println("Error in checkStock");
+        }
     }
     public void updateStock() {
-        System.out.println("From class Medicine = updateStock" );
+        try {
+            System.out.println("From class Medicine = updateStock" );
+        } catch (Exception e) {
+            System.out.println("Error in updateStock");
+        }
     }
     public void isExpired() {
-        System.out.println("From class Medicine = isExpired" );
+        try {
+            System.out.println("From class Medicine = isExpired" );
+        } catch (Exception e) {
+            System.out.println("Error in isExpired");
+        }
     }
 
 }
